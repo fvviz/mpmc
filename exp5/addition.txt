@@ -1,0 +1,5 @@
+ORG OOH
+    MOV A, #13H 
+    ADD A, #20H 
+    MOV 55H, A 
+    END

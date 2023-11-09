@@ -1,0 +1,9 @@
+codeseg segment
+assune cs :codeseg
+start:
+mov al, 08h 
+mov bh, 06h 
+sub al,bh 
+hlt
+codeseg ends 
+end

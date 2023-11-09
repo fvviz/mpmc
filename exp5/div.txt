@@ -1,0 +1,7 @@
+ORG OOH
+    MOV A, #20H 
+    MOV B, #13Н
+    DIY AB
+    HOY 55H, A
+    MOV 56H, B 
+    END

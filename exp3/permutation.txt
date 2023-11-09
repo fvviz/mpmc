@@ -1,0 +1,39 @@
+data segment 
+n equ 05h 
+r equ 03h 
+nfac dw ?
+res dw? 
+data ends 
+codeseg segment
+assume cs: codeseg, ds:data 
+start:
+mov ax, data 
+mov ds, ax 
+mov ds: [2000h], n 
+mov ds: [2002h], r 
+mov cx, n 
+mov ax, 0001h 
+rpt:
+mul cx
+loop rpt 
+mov nfac, ax 
+mov ds: [2004h], ax 
+mov ax, n 
+mov bx, r 
+sub ax, bx 
+mov cx, ax 
+mov ax, 0001h 
+rpt1:
+mul cx
+loop rpt1
+mov bx, ax 
+mov ax, nfac 
+div bx
+mov res, ax 
+mov ds: [2006h], ax 
+hlt
+codeseg ends 
+ends
+hlt
+codeseg ends
+end start

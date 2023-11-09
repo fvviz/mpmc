@@ -1,0 +1,9 @@
+codeseg segment
+assume cs : codeseg
+start:
+mov al, 02h 
+mov bh, 02h 
+mul bh 
+hlt
+codeseg ends 
+end

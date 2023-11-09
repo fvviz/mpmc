@@ -1,0 +1,7 @@
+ORG 00H
+    MOV A, #20H
+    MOV B, #13Н
+    MUL AB
+    MOV 55H, A
+    MOV 56H,B
+    END

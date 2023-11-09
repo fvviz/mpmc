@@ -1,0 +1,11 @@
+ORG 0000H
+    MOV A, 50H
+    CUNE A, #30H, OVER
+    MOV R3, A
+    SJMP EXIT
+    OVER: JNC NEXT
+    MOV R1, A   
+    SJMP EXIT
+    NEXT: MOV R2, A
+    EXIT: NOP
+    END

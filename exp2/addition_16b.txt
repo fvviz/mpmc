@@ -1,0 +1,9 @@
+codeseg segment 
+assume cs:codeseg 
+start:
+mov ax, 0303h 
+mov bx, 0303h 
+add ax, bx hlt
+hlt
+codeseg ends
+end

@@ -1,0 +1,11 @@
+codeseg segment
+assune cs :codeseg
+start:
+mov cx, 05h 
+mov ax, 01h 
+rpt :
+mu 1 cx
+loop rpt 
+hlt
+codeseg ends
+end start

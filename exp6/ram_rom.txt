@@ -1,0 +1,11 @@
+ORG 0000H
+    MOV RO, #50H 
+    MOV DPTR, #3000H
+    MOV R2, #05H
+    LOOP: MOV A, @RO
+    CPL A
+    MOVX @DPTR, A
+    INC RO
+    INC DPIR
+    DJNZ R2, LOOP
+    END

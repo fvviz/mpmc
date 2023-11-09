@@ -1,0 +1,20 @@
+data segment
+array db 01h, 04h, 02h, 05h, 08h
+data ends 
+codeseg segment 
+assume cs:codeseg, ds:data 
+start:
+mov ax, data 
+mov ds, ax 
+mov cx, 05h 
+mov al, array[sil]
+rpt:
+inc si 
+cmp al, array[sil]
+jnc next
+mov al, array[sil]
+next: loop rpt 
+mov ds: [2000h], al 
+hlt
+codeseg ends 
+end start

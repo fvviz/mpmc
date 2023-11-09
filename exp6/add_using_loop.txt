@@ -1,0 +1,6 @@
+ORG 00H
+    CLR A
+    MOV R1, #0AH
+    RPT: ADD A, #0AH DJNZ RI, RPT
+    MOV 50H, A 
+    END

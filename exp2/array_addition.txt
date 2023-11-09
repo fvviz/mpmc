@@ -1,0 +1,18 @@
+data segment
+array DB 10h, 40h, 05h, 30h, 08h 
+data ends
+
+codeseg segment 
+assume cs:codeseg, dsidata 
+start:
+mov ax, data 
+mov ds, ax 
+mov cl, 05h 
+mov ax, oh 
+rpt: mou bl, arrayl[sil]
+add al, bl 
+inc si l
+loop rpt
+hlt
+codeseg ends 
+end start

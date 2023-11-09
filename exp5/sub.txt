@@ -1,0 +1,5 @@
+ORG OOH
+    MOV A, #20H 
+    SUBB A, #13H 
+    MOV 55H, A 
+    END
